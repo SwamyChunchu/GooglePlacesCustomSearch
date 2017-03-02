@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wM3-em-HF4" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="63" width="320" height="417"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Select Location" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="p8O-b7-ddf" customClass="MVPlaceSearchTextField">
+                                <rect key="frame" x="10" y="20" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="GE0-Og-ohI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wM3-em-HF4" firstAttribute="top" secondItem="p8O-b7-ddf" secondAttribute="bottom" constant="3" id="9CP-W9-Med"/>
+                            <constraint firstAttribute="trailing" secondItem="p8O-b7-ddf" secondAttribute="trailing" constant="10" id="Fe8-Zy-aEL"/>
+                            <constraint firstItem="p8O-b7-ddf" firstAttribute="centerX" secondItem="wM3-em-HF4" secondAttribute="centerX" id="Gug-x4-a0z"/>
+                            <constraint firstItem="wM3-em-HF4" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="SzP-Qa-xNn"/>
+                            <constraint firstItem="p8O-b7-ddf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="mUL-ew-vXN"/>
+                            <constraint firstItem="p8O-b7-ddf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-6" id="maP-zR-IF3"/>
+                            <constraint firstItem="p8O-b7-ddf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="s2i-u7-XA0"/>
+                            <constraint firstAttribute="trailing" secondItem="wM3-em-HF4" secondAttribute="trailing" id="vjq-mG-gqy"/>
+                            <constraint firstItem="wM3-em-HF4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vra-mI-3Sx"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="maP-zR-IF3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="480"/>
+                    <connections>
+                        <outlet property="mapView_" destination="wM3-em-HF4" id="Zc0-ui-Ncm"/>
+                        <outlet property="searchDropRef" destination="p8O-b7-ddf" id="Ehi-o6-aCr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="337"/>
+        </scene>
+    </scenes>
+</document>
